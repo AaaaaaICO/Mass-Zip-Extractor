@@ -16,4 +16,8 @@ Please report any issues on the github with the version you where using (exe or 
 
 #### Images
 
-TODO
+![alt text](https://github.com/AaaaaaICO/Mass-Zip-Extractor/blob/main/ForGit/Example.PNG "Exe running")
+
+#### ------Standalone------
+
+![alt text](https://github.com/AaaaaaICO/Mass-Zip-Extractor/blob/main/ForGit/StandaloneExample.PNG "Standalone running")

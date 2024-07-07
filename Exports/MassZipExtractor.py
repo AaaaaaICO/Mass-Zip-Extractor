@@ -61,7 +61,7 @@ def RUN():
         if(".zip" in x):
             zipFoldersFound += 1
     print("Found: " + str(zipFoldersFound) + " zipped folders in " + location)
-    toDelete = input("[Y] Delete extracted zip folders\n[N] Keep extracted zip files\n")
+    toDelete = input("[Y] Delete extracted zip files\n[N] Keep extracted zip files\n")
     DeleteBool = False
     numFailed = 0
     if(toDelete == "Y" or toDelete == "y"):
