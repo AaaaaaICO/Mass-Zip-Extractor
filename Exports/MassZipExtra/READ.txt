@@ -1,0 +1,10 @@
+Do "NOT" move the exe from the Python folder if you want to move the exe make a shortcut or move the whole folder.
+this is not been through extensive error testing if you find a bug please report it to my github ---> https://github.com/AaaaaaICO and what version you used
+
+The python files for exe and standalone are different one may be slightly quicker than the other but it would be negligable
+
+The standalone version cant place the moved zip files out of the current dir while the exe can.
+
+anyway thank you for downloading star the repository if you liked it.
+
+--Aico--

@@ -1,0 +1,126 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1nl6kocji4bu"]
+
+[ext_resource type="Script" path="res://Scripts/MainControll.gd" id="1_1dnq7"]
+[ext_resource type="Texture2D" uid="uid://cseq50un2wool" path="res://Sprites/GithubLogo.png" id="2_x8jut"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1dnq7")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0980392, 0.196078, 0.219608, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = -100
+dragger_visibility = 1
+
+[node name="MarginContainer (Logo)" type="MarginContainer" parent="VBoxContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_right = 10
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer/VSplitContainer/MarginContainer (Logo)"]
+layout_mode = 2
+uri = "https://github.com/AaaaaaICO"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/VSplitContainer/MarginContainer (Logo)"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/VSplitContainer/MarginContainer (Logo)/CenterContainer"]
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("2_x8jut")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="VBoxContainer/VSplitContainer/MarginContainer"]
+layout_mode = 2
+split_offset = -80
+dragger_visibility = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Extract From" type="VBoxContainer" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="lbl_Extract From" type="Label" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer/Extract From"]
+layout_mode = 2
+text = "Extract From"
+
+[node name="TE_Extract From" type="TextEdit" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer/Extract From"]
+custom_minimum_size = Vector2(150, 32.765)
+layout_mode = 2
+
+[node name="Extract To" type="VBoxContainer" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="lbl_Extract To" type="Label" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer/Extract To"]
+layout_mode = 2
+text = "Extract To"
+
+[node name="TE_Extract To" type="TextEdit" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer/Extract To"]
+custom_minimum_size = Vector2(150, 32.765)
+layout_mode = 2
+
+[node name="Extract To2" type="VBoxContainer" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="lbl_NFldName" type="Label" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer/Extract To2"]
+layout_mode = 2
+text = "New Folder Name"
+
+[node name="TE_NFldName" type="TextEdit" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/HBoxContainer/Extract To2"]
+custom_minimum_size = Vector2(150, 32.765)
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Delete Old Zip Files"
+
+[node name="btn_Run" type="Button" parent="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer"]
+layout_mode = 2
+text = "RUN SCRIPT"
+
+[connection signal="toggled" from="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="VBoxContainer/VSplitContainer/MarginContainer/VSplitContainer/btn_Run" to="." method="_on_btn_run_pressed"]

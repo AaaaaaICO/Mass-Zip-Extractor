@@ -1,0 +1,9 @@
+Files found: 5
+Zip files found: 1
+
+
+--- 0.01386713981628418 Seconds to finish ---
+0 zip files failed to be extracted
+
+Thank you for using this software
+report any problems on the github page
