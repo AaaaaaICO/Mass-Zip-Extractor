@@ -11,12 +11,14 @@ import sys
 FilesFinished = 0
 WriteQueue = []
 WriteQueueUpdate = False
-
+RUNNING = True
 def RunningCheck():
+    global RUNNING
     global WriteQueueUpdate
     while True:
-        time.sleep(5)
-        print("--Running--")
+        if(RUNNING):
+            time.sleep(5)
+            print("--Running--")
 
 def GenerateHex(Length):
     possible = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -95,6 +97,8 @@ def ExtractZipFiles(FromLocation, ToLocation, NewFolderName, DeleteOldFile):
     print("report any problems on the github page")
     global WriteQueueUpdate
     WriteQueueUpdate = True
+    global RUNNING
+    RUNNING = False
     RunningCheckThread.join()
 
 args = sys.argv
