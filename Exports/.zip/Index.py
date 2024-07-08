@@ -68,6 +68,7 @@ def ExtractZipFiles(FromLocation, ToLocation, NewFolderName, DeleteOldFile):
                     pass
             else:
                 pass
+   
     # Verify FromLocation exists
     if(os.path.isdir(FromLocation)):
         errorcheck = CreateNewFolder(NewFolderName, ToLocation)
